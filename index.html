@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Sales Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Sales Dashboard</h1>
+            <p>Dynamic Sales Data & Chart</p>
+        </header>
+
+        <div class="live-info">
+            <span>🕒 Current Date & Time:</span>
+            <strong id="dateTime"></strong>
+        </div>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Sales</h3>
+                <p id="totalSales">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Products Sold</h3>
+                <p id="productsSold">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Sales</h3>
+                <p id="averageSales">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Best Month</h3>
+                <p id="bestMonth">Jun</p>
+            </div>
+
+        </section>
+
+        <section class="chart-section">
+
+            <div class="chart-header">
+                <h2>Monthly Sales</h2>
+
+                <button onclick="generateData()">
+                    Generate New Data
+                </button>
+            </div>
+
+            <canvas id="salesChart" width="900" height="400"></canvas>
+
+        </section>
+
+        <div class="status">
+            <p id="status">Sales data loaded successfully!</p>
+        </div>
+
+        <section class="table-section">
+        
+            <h2>Sales Details</h2>
+        
+            <table>
+        
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Sales</th>
+                        <th>Products Sold</th>
+                    </tr>
+                </thead>
+        
+                <tbody id="salesTable"></tbody>
+        
+            </table>
+        
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
